@@ -179,9 +179,7 @@ bootstrap_results_r %>%
     ci_upper = quantile(r.squared, 0.975)
   ) %>% 
   knitr::kable()
-```
 
-```{r, message = FALSE}
 bootstrap_results_log %>% 
   summarise(
     ci_lower = quantile(log, 0.025), 
@@ -189,4 +187,6 @@ bootstrap_results_log %>%
   ) %>% 
   knitr::kable()
 ```
+
+The 95% confidence intervals are `(0.8940, 0.9274)` and `(1.9657,2.0586)` for `r-squared` and `log(beta0*beta1)`, respectively. 
 
