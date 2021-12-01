@@ -120,12 +120,6 @@ boot_sample = function(df) {
 ```
 
 ```{r, message = FALSE}
-boot_sample(weather_df) %>% 
-  ggplot(aes(x = tmin, y = tmax)) + 
-  geom_point(alpha = .8) + 
-  stat_smooth(method = "lm")
-```
-```{r, message = FALSE}
 bootstrapping = 
   tibble(
     strap_number = 1:5000,
